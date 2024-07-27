@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets API</title>
+    <script>
+        // URL of your deployed Google Apps Script Web App
+        const API_URL = 'https://script.google.com/macros/s/AKfycbzS_dEIfh86LfcebwblSfE7atW8X44fzpsWejLmPUwaltCPbMMmGcrroEalCNhq35EJ/exec';
+
+        // Function to handle POST requests
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Get form values
+            const firstname = document.getElementById('firstname').value;
+            const lastname = document.getElementById('lastname').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            // Prepare data to send
+            const postData = {
+                firstname: firstname,
+                lastname: lastname,
+                email: email,
+                phone: phone
+            };
+
+            fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(postData)
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert('Data submitted successfully!');
+                document.getElementById('form').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error submitting data');
+            });
+        }
+
+        // Function to handle GET requests
+        function fetchData() {
+            fetch(API_URL)
+            .then(response => response.json())
+            .then(data => {
+                const table = document.getElementById('data-table');
+                table.innerHTML = ''; // Clear previous data
+
+                // Create table headers
+                const headerRow = document.createElement('tr');
+                ['firstname', 'lastname', 'email', 'phone'].forEach(header => {
+                    const th = document.createElement('th');
+                    th.textContent = header;
+                    headerRow.appendChild(th);
+                });
+                table.appendChild(headerRow);
+
+                // Populate table with data
+                data.forEach(row => {
+                    const tr = document.createElement('tr');
+                    ['firstname', 'lastname', 'email', 'phone'].forEach(field => {
+                        const td = document.createElement('td');
+                        td.textContent = row[field] || '';
+                        tr.appendChild(td);
+                    });
+                    table.appendChild(tr);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error fetching data');
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Google Sheets API</h1>
+
+    <!-- Form for POST requests -->
+    <form id="form" onsubmit="submitForm(event)">
+        <h2>Submit Data</h2>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Button to fetch and display data -->
+    <button onclick="fetchData()">Fetch Data</button>
+
+    <!-- Table to display data -->
+    <table id="data-table" border="1">
+        <thead>
+            <!-- Table headers will be inserted here by JavaScript -->
+        </thead>
+        <tbody>
+            <!-- Data rows will be inserted here by JavaScript -->
+        </tbody>
+    </table>
+</body>
+</html>
