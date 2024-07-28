@@ -53,17 +53,94 @@
         </div>
       </header>
 
-      <main>
+      <main style="padding-top: 150px;">
         
-        
-        
+        <section class="topper">
+          <h1>Get Involved</h1>
+          <p style="padding-bottom: 30px;">Want to become a student leader, volunteer, or program host, or donor?</p>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
+
+        <section class="inner">
+          <h2>Become a Student Leader (high school and college students)</h2>
+          <h4>Is there somebody in Project NexTech at your school or robotics team?</h4>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card" style="text-align: left;">
+                <div class="card-body" style="text-align: left;">
+                  <h4>Yes</h4>
+                  <p id="student_leader_school_yes">Loading data...</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card" style="text-align: left;">
+                <div class="card-body" style="text-align: left;">
+                  <h4>No</h4>
+                  <p id="student_leader_school_no">Loading data...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4>Are you mostly a STEM-focused or humanities-focused student?</h4>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card" style="text-align: left;">
+                <div class="card-body" style="text-align: left;">
+                  <h4>STEM-focused</h4>
+                  <p id="student_leader_stem-focused">Loading data...</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card" style="text-align: left;">
+                <div class="card-body" style="text-align: left;">
+                  <h4>Humanities-focused</h4>
+                  <p id="student_leader_humanities-focused">Loading data...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="student_leader_bottom_text">Loading data...</p>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
+
+        <section class="inner">
+          <h2>Become a Volunteer (middle school, high school, and college students)</h2>
+          <p id="volunteer_text">Loading data...</p>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
+
+        <section class="inner">
+          <h2>Become a Program Host (library, school, or nonprofit representatives)</h2>
+          <p id="program_host_text">Loading data...</p>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
+
+        <section class="inner">
+          <h2>Become a Donor (organization representatives and individuals)</h2>
+          <p id="donor_text">Loading data...</p>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
+
+        <section class="inner">
+          <h2>Become a Board of Directors Member</h2>
+          <p id="board_of_directors_text">Loading data...</p>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
         
       </main>
 
     <script>
         (async () => {
             await fetchEntireSheet('Get Involved');
-            displaySheetData('Get Involved', 'Coordinate', 'ID'); // Usage: <p id="ID">Loading data...</p>
+            displaySheetData('Get Involved', 'A4', 'student_leader_school_yes'); // Usage: <p id="ID">Loading data...</p>
+            displaySheetData('Get Involved', 'B4', 'student_leader_school_no');
+            displaySheetData('Get Involved', 'A7', 'student_leader_stem-focused');
+            displaySheetData('Get Involved', 'B7', 'student_leader_humanities-focused');
+            displaySheetData('Get Involved', 'A8', 'student_leader_bottom_text');
+
+            displaySheetData('Get Involved', 'A22', 'board_of_directors_text');
         })();
     </script>
 
