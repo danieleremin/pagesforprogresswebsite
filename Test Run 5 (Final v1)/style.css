@@ -176,6 +176,19 @@ body {
     }
 }
 
+.form-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding for some space on the sides */
+}
+
+.form-container iframe {
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    border: none;
+}
+
 .tail{ /* The footer of each page (includes Google Form and Footer) */
     max-width: 1200px;
     margin: 0 auto;
@@ -329,5 +342,130 @@ header {
     .carousel-title p,
     .carousel-caption {
         font-size: 0.8em; /* Smaller font size for smaller screens */
+    }
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-column {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%; /* Adjusted width */
+}
+
+.footer-logo {
+    width: 90px; /* Adjusted size */
+    height: auto;
+}
+
+.mission-column {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 1em; /* Slightly smaller font size */
+    font-weight: normal; /* Remove bold */
+    width: 60%; /* Adjusted width to double the default */
+    max-width: 60%; /* Ensure it doesn’t exceed container width */
+}
+
+.links-column {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 20%; /* Adjusted width */
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.footer-link {
+    color: #212121;
+    text-decoration: none;
+    font-size: 0.75em; /* Smaller font size */
+    font-weight: 500;
+    transition: color 0.2s;
+    white-space: nowrap; /* Ensure single line */
+}
+
+.footer-link:hover {
+    color: #8167a9;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Larger gap between different platforms */
+    margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.social-links a {
+    color: #000; /* Set the text color to black */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.social-links a:hover {
+    color: #8167a9;
+}
+
+.social-logo {
+    width: 20px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 8px; /* Gap between logo and text */
+}
+
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-column,
+    .mission-column,
+    .links-column {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
     }
 }
