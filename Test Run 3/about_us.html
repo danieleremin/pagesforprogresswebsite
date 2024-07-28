@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Project NexTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  
+  <header>
+    <div class="navigation-wrap bg-light start-header start-style">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-md navbar-light">
+              <a class="navbar-brand" href="https://front.codes/" target="_blank">
+                <img src="./img/Logo.png" alt="Logo" class="logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="about_us.html"><strong>About Us</strong></a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="our_team.html">Our Team</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="courses.html">Courses</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="impact.html">Impact</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="get_involved.html">Get Involved</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>		
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 150px;">
+    <section class="topper">
+      <h1>About Us</h1>
+      <p style="padding-bottom: 30px;">Learn about the inner workings and history of Project NexTech!</p>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
+    
+    <section class="inner">
+      <h2>Mission Statement</h2>
+      <p id="mission_statement">Loading data...</p>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
+  
+    <section class="inner">
+      <h2>What We Do</h2>
+      <p id="what_we_do">Loading data...</p>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
+  
+    <section class="inner">
+      <h2>Values</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">1</h5>
+              <p class="card-text" id="values1">Loading data...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">2</h5>
+              <p class="card-text" id="values2">Loading data...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">3</h5>
+              <p class="card-text" id="values3">Loading data...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
+    
+  
+    <section class="inner">
+      <h2>Business Structure</h2>
+      <p id="business_structure">Loading data...</p>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
+  
+    <section class="inner">
+      <h2>Transparency Report</h2>
+      <p id="transparency_report">Loading data...</p>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
+  
+    <section class="inner">
+      <h2>Our Founding</h2>
+      <p id="our_founding">Loading data...</p>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
+  </main>  
+  
+  <script>
+    displaySheetData('About Us!A2', 'mission_statement'); // Usage: <p id="ID">Loading data...</p>
+    displaySheetData('About Us!A4', 'what_we_do');
+    displaySheetData('About Us!A6', 'values1');
+    displaySheetData('About Us!B6', 'values2');
+    displaySheetData('About Us!C6', 'values3');
+    displaySheetData('About Us!A8', 'business_structure');
+    displaySheetData('About Us!A10', 'transparency_report');
+    displaySheetData('About Us!A12', 'our_founding');
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</body>
+</html>
