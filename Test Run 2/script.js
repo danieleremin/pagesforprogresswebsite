@@ -20,7 +20,10 @@ async function displaySheetData(cellRange, elementId) {
     const cellValue = await getSheetData(cellRange);
     const element = document.getElementById(elementId);
     if (element) {
-        element.innerHTML = cellValue.replace(/\n/g, '<br>');
+        if (cellValue.slice(-4) == ".png" || cellValue.slice(-4) == ".jpg" || cellValue.slice(-5) == ".jpeg")
+            element.src = cellValue;
+        else
+            element.innerHTML = cellValue.replace(/\n/g, '<br>');
     } else {
         console.error(`Element with id ${elementId} not found.`);
     }

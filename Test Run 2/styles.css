@@ -168,7 +168,7 @@ body {
     }
     h2 {
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom:10px;
         padding-bottom: 10px;
     }
     p {
@@ -189,19 +189,45 @@ body {
 }
 
 .card {
-    height: 16vh;
+    margin: 0px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden; /* Ensures the image does not overflow the card */
+    text-align: center; /* Center the text */
+    h4 {
+        font-size: 1.25em;
+        margin-top: 0;
+    }
+}
+  
+.card-img-container {
+    height: auto;
+    padding-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+    display: block;
+    padding-bottom: 0;
 }
 
-.card-title {
-    font-size: 32px;
-    margin-bottom: 10px;
+.card-img-top {
+    width: 80%; /* Image takes 80% of the card width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Center the image horizontally */
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
+    padding: 15px;
+}
+
+.card-title {
+    margin-bottom: 10px;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #555;
 }
 
 .row {

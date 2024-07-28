@@ -53,12 +53,66 @@
     </div>
   </header>
 
-  <main>
+  <main style="padding-top: 150px;">
+    <section class="topper">
+      <h1>Our Team</h1>
+      <p style="padding-bottom: 30px;">Meet some of the talented people leading Project NexTech!</p>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
 
+    <section class="inner">
+      <h2>Executive Committee (AQ3 FY2024)</h2>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img src="" id="president_image" class="card-img-container">
+            <div class="card-body">
+              <h4 class="card-title">President</h4>
+              <p class="card-text" id="president">Loading data...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img src="" id="co-president_image" class="card-img-container">
+            <div class="card-body">
+              <h4 class="card-title">Co-President</h4>
+              <p class="card-text" id="co-president">Loading data...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="" id="vp_of_curriculum_image" class="card-img-container">
+              <h4 class="card-title">VP of Curriculum</h4>
+              <p class="card-text" id="vp_of_curriculum">Loading data...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="" id="vp_of_outreach_image" class="card-img-container">
+              <h4 class="card-title">VP of Outreach</h4>
+              <p class="card-text" id="vp_of_outreach">Loading data...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+    </section>
   </main>
   
   <script>
-    displaySheetData('Sheet!Position', 'ID'); // Usage: <p id="ID">Loading data...</p>
+    displaySheetData('Our Team!A2', 'president_image');
+    displaySheetData('Our Team!A4', 'president'); // Usage: <p id="ID">Loading data...</p>
+    displaySheetData('Our Team!B2', 'co-president_image');
+    displaySheetData('Our Team!B4', 'co-president');
+    displaySheetData('Our Team!C2', 'vp_of_curriculum_image');
+    displaySheetData('Our Team!C4', 'vp_of_curriculum');
+    displaySheetData('Our Team!D2', 'vp_of_outreach_image');
+    displaySheetData('Our Team!D4', 'vp_of_outreach');
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
