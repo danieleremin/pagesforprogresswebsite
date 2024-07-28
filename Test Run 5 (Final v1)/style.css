@@ -235,3 +235,99 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
 }
+
+/* Home Page Carousel */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    /* Maintains 16:9 aspect ratio when fullscreen */
+    min-height: 300px; /* Minimum height to maintain aspect ratio on smaller screens */
+    object-fit: cover;
+    filter: brightness(70%); /* Darken images */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for images */
+}
+
+.carousel {
+    max-width: 1200px;
+    margin: 20px auto; /* Center the carousel with 20px margin */
+    padding: 0 20px; /* Add padding to ensure 20px margins */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+    margin-top: 110px;
+}
+
+.carousel-indicators li {
+    background-color: #000;
+}
+
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-title {  
+    position: absolute;
+    top: 30%; /* Adjusted slightly higher than center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10; /* Ensure it stays on top */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+.carousel-title h1 {
+    font-size: 4em; /* Slightly larger font size */
+    font-weight: normal; /* No longer bold */
+}
+
+.carousel-title p {
+    font-size: 1.5em; /* Larger font size */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    width: calc(100% - 40px); /* Adjust for margins */
+    font-size: 1.2em;
+    z-index: 5;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        min-height: 200px; /* Adjust minimum height for smaller screens */
+    }
+
+    .carousel-title h1 {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+
+    .carousel-title p,
+    .carousel-caption {
+        font-size: 1em; /* Smaller font size for smaller screens */
+    }
+    }
+
+    @media (max-width: 576px) {
+    .carousel-item img {
+        min-height: 150px; /* Adjust minimum height for smaller screens */
+    }
+
+    .carousel-title h1 {
+        font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+
+    .carousel-title p,
+    .carousel-caption {
+        font-size: 0.8em; /* Smaller font size for smaller screens */
+    }
+}
