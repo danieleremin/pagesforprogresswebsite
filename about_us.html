@@ -54,9 +54,13 @@
         </div>
       </header>
 
-      <main style="padding-top: 150px;">
-        
-        <section class="topper">
+      <main>
+        <section class="inner" style="padding-top: 110px; text-align: center;">
+          <h2 id="news_bar">Loading data...</h2>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
+
+        <section class="topper" style="padding-top: 25px;">
           <h1>About Us</h1>
           <p style="padding-bottom: 30px;">Learn about the inner workings and history of Project NexTech!</p>
           <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
@@ -64,7 +68,7 @@
         
         <section class="inner">
           <h2>Mission Statement</h2>
-          <p id="mission_statement">Loading data...</p>
+          <p id="mission">Loading data...</p>
           <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
         </section>
       
@@ -138,7 +142,7 @@
                       <img src="./img/Logo.png" alt="Logo" class="footer-logo">
                   </div>
                   <div class="col-md-7 mission-column">
-                      <p id="about_us_mission">Loading data...</p>
+                      <p id="mission_statement">Loading data...</p>
                   </div>
                   <div class="col-md-3 links-column">
                       <div class="links-grid">
@@ -176,7 +180,7 @@
     <script>
         (async () => {
             await fetchEntireSheet('About Us');
-            displaySheetData('About Us', 'A2', 'mission_statement'); // Usage: <p id="ID">Loading data...</p>
+            displaySheetData('About Us', 'A2', 'mission'); // Usage: <p id="ID">Loading data...</p>
             displaySheetData('About Us', 'A4', 'what_we_do');
             displaySheetData('About Us', 'A6', 'values1');
             displaySheetData('About Us', 'B6', 'values2');
@@ -184,7 +188,9 @@
             displaySheetData('About Us', 'A8', 'business_structure');
             displaySheetData('About Us', 'A10', 'transparency_report');
             displaySheetData('About Us', 'A12', 'our_founding');
-            displaySheetData('About Us', 'A14', 'about_us_mission');
+            await fetchEntireSheet('Global');
+            displaySheetData('Global', 'A2', 'mission_statement');
+            displaySheetData('Global', 'A5', 'news_bar');
         })();
     </script>
 

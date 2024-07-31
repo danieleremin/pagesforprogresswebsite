@@ -54,7 +54,11 @@
         </div>
       </header>
 
-      <main style="padding-top: 0px;">
+      <main>
+        <section class="inner" style="padding-top: 110px; text-align: center;">
+          <h2 id="news_bar">Loading data...</h2>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
         
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
             <ol class="carousel-indicators">
@@ -117,7 +121,7 @@
                 </div>
               </div>
               <div class="carousel-title">
-                <h1>Project NexTech (WEBSITE IN TESTING)</h1>
+                <h1>Project NexTech</h1>
                 <p id="tagline">Loading data...</p>
               </div>
             </div>
@@ -244,7 +248,7 @@
                         <img src="./img/Logo.png" alt="Logo" class="footer-logo">
                     </div>
                     <div class="col-md-7 mission-column">
-                        <p id="home_mission">Loading data...</p>
+                        <p id="mission_statement">Loading data...</p>
                     </div>
                     <div class="col-md-3 links-column">
                         <div class="links-grid">
@@ -305,7 +309,9 @@
             displaySheetData('Home', 'A7', 'stat1');
             displaySheetData('Home', 'B7', 'stat2');
             displaySheetData('Home', 'C7', 'stat3');
-            displaySheetData('Home', 'A10', 'home_mission');
+            await fetchEntireSheet('Global');
+            displaySheetData('Global', 'A2', 'mission_statement');
+            displaySheetData('Global', 'A5', 'news_bar');
         })();
     </script>
 

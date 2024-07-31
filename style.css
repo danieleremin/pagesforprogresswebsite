@@ -276,7 +276,6 @@ header {
     margin: 20px auto; /* Center the carousel with 20px margin */
     padding: 0 20px; /* Add padding to ensure 20px margins */
     box-sizing: border-box; /* Ensure padding is included in width calculations */
-    margin-top: 110px;
 }
 
 .carousel-indicators li {
@@ -290,8 +289,7 @@ header {
 .carousel-title {  
     position: absolute;
     top: 30%; /* Adjusted slightly higher than center */
-    left: 30%;
-    transform: translate(-21.25%);
+    left: 17.42%;
     color: white;
     text-align: center;
     z-index: 10; /* Ensure it stays on top */
@@ -299,12 +297,12 @@ header {
 }
 
 .carousel-title h1 {
-    font-size: 4em; /* Slightly larger font size */
+    font-size: 5em; /* Slightly larger font size */
     font-weight: normal; /* No longer bold */
 }
 
 .carousel-title p {
-    font-size: 1.5em; /* Larger font size */
+    font-size: 2em; /* Larger font size */
 }
 
 .carousel-caption {

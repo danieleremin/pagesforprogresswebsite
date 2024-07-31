@@ -54,9 +54,13 @@
         </div>
       </header>
 
-      <main style="padding-top: 150px;">
-        
-        <section class="topper">
+      <main>
+        <section class="inner" style="padding-top: 110px; text-align: center;">
+          <h2 id="news_bar">Loading data...</h2>
+          <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
+        </section>
+
+        <section class="topper" style="padding-top: 25px;">
             <h1>Our Team</h1>
             <p style="padding-bottom: 30px;">Meet some of the talented people leading Project NexTech!</p>
             <hr style="border-color: #e0e0e0; border-style: solid; border-width: 1px;">
@@ -359,7 +363,7 @@
                         <img src="./img/Logo.png" alt="Logo" class="footer-logo">
                     </div>
                     <div class="col-md-7 mission-column">
-                        <p id="our_team_mission">Loading data...</p>
+                        <p id="mission_statement">Loading data...</p>
                     </div>
                     <div class="col-md-3 links-column">
                         <div class="links-grid">
@@ -449,7 +453,9 @@
             displaySheetData('Our Team', 'A31', 'anaheim_metro_area_branch_managers');
             displaySheetData('Our Team', 'A33', 'san_francisco_bay_area_branch_managers');
             displaySheetData('Our Team', 'A35', 'boston_metro_area_branch_managers');
-            displaySheetData('Our Team', 'A37', 'our_team_mission');
+            await fetchEntireSheet('Global');
+            displaySheetData('Global', 'A2', 'mission_statement');
+            displaySheetData('Global', 'A5', 'news_bar');
         })();
     </script>
 
