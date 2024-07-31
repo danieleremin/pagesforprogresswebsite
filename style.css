@@ -288,7 +288,7 @@ header {
 
 .carousel-title {  
     position: absolute;
-    top: 30%; /* Adjusted slightly higher than center */
+    top: 35%; /* Adjusted slightly higher than center */
     left: 17.42%;
     color: white;
     text-align: center;
