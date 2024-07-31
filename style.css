@@ -27,6 +27,10 @@ body {
     transition: all 0.3s ease-out;
 }
 
+.bg-light{
+    background-color: #eee !important;
+}
+
 .navigation-wrap {
     position: fixed;
     width: 100%;
@@ -346,7 +350,7 @@ header {
 }
 
 .footer {
-    background-color: #f8f9fa;
+    background-color: #eee;
     padding: 20px 0;
     border-top: 1px solid #e0e0e0;
     text-align: center;
