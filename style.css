@@ -147,6 +147,26 @@ body {
     transition: all 200ms linear;
 }
 
+.nav-card {
+    color:#000 !important;
+    text-decoration: none !important;
+
+    .card-title {
+        font-size: 1.5625em;
+        font-weight: 500;
+    }
+
+    .card-body {
+        padding: 1.5em;
+    }
+}
+
+.nav-card:hover {
+    .card {
+        background-color: #e7e7e7;
+    }
+}
+
 /* Webpage Content Defaults */
 
 .topper{ /* The headers for each page */
@@ -198,10 +218,13 @@ body {
 
 .card {
     margin: 0px;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow: hidden; /* Ensures the image does not overflow the card */
     text-align: center; /* Center the text */
+    height: 100%;
+
     h4 {
         font-size: 1.25em;
         margin-top: 0;
@@ -215,6 +238,7 @@ body {
     padding-left: 10%;
     display: block;
     padding-bottom: 0;
+    background-color: #e7e7e7;
 }
 
 .card-img-top {
@@ -270,7 +294,7 @@ header {
 }
 
 .carousel-indicators li {
-    background-color: #000;
+    background-color: #747474;
 }
 
 .carousel-inner {
