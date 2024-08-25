@@ -234,8 +234,8 @@ body {
 .card-img-container {
     height: auto;
     padding-top: 10%;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 0%;
+    padding-left: 0%;
     display: block;
     padding-bottom: 0;
     background-color: #e7e7e7;
