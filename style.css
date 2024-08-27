@@ -241,6 +241,31 @@ body {
     background-color: #e7e7e7;
 }
 
+.card-img-container2 {
+    height: auto;
+    padding-top: 10%;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 10%;
+    display: block;
+    background-color: #e7e7e7;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+.card a {
+    display: block; /* Make the anchor tag a block-level element to contain the image */
+    width: 100%; /* Ensure the anchor tag takes up the full width of its container */
+    height: auto; /* Allow the anchor tag to adjust its height based on content */
+    text-align: center; /* Center-align content */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.card a img {
+    display: block; /* Make the image a block-level element */
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
 .card-img-top {
     width: 80%; /* Image takes 80% of the card width */
     height: auto; /* Maintain the aspect ratio */
