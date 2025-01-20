@@ -295,6 +295,50 @@ body {
     justify-content: space-between;
 }
 
+.newrow {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.custom-row {
+    display: flex;
+    justify-content: space-between; /* Distribute columns evenly with spacing */
+    gap: 0;
+}
+
+.custom-col {
+    flex-shrink: 0;
+    overflow: hidden; /* Ensures content doesn't overflow the column */
+    box-sizing: border-box; /* Includes padding and border in the width calculation */
+}
+
+.custom-col img {
+    max-width: 100%; /* Ensures the image does not exceed the column width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Prevents inline-block space issues */
+}  
+
+.custom-col:nth-child(1) {
+    flex-basis: calc(20% - 25px);
+    padding-right: 0;
+}
+
+.custom-col:nth-child(2) {
+    flex-basis: 30%;
+    padding-left: 0;
+}
+
+.custom-col:nth-child(3) {
+    flex-basis: calc(20% - 25px);
+    padding-right: 0;
+}
+
+.custom-col:nth-child(4) {
+    flex-basis: 30%;
+    padding-left: 0;
+}
+
 /* Home Page Carousel */
 
 header {
