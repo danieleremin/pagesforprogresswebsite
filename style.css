@@ -5,17 +5,12 @@ body {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    
     background-position: center;
     background-repeat: repeat;
     background-size: 7%;
-    background-color: #1e1e1e;
+    background-color: #fff;
     overflow-x: hidden;
     transition: all 200ms linear;
-}
-
-.text{
-    color: #ddd;
 }
 
 .start-header {
@@ -33,7 +28,7 @@ body {
 }
 
 .bg-light{
-    background-color: #282828 !important;
+    background-color: #eee !important;
 }
 
 .navigation-wrap {
@@ -72,7 +67,7 @@ body {
     height: 17px;
     background-image: none;
     position: relative;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #000;
     transition: all 300ms linear;
 }
 
@@ -81,7 +76,7 @@ body {
     width: 24px;
     position: absolute;
     height: 1px;
-    background-color: #282828;
+    background-color: #000;
     top: 0;
     left: 0;
     content: '';
@@ -106,14 +101,14 @@ body {
 }
 
 .nav-link {
-    color: #ddd !important;
+    color: #212121 !important;
     font-weight: 500;
     font-size: 1.25em;
     transition: all 200ms linear;
 }
 
 .nav-item:hover .nav-link {
-    color: #5886c6 !important;
+    color: #8167a9 !important;
 }
 
 .nav-item.active .nav-link {
@@ -153,7 +148,7 @@ body {
 }
 
 .nav-card {
-    color:#bbb !important;
+    color:#000 !important;
     text-decoration: none !important;
 
     .card-title {
@@ -168,7 +163,7 @@ body {
 
 .nav-card:hover {
     .card {
-        background-color: #282828;
+        background-color: #e7e7e7;
     }
 }
 
@@ -181,15 +176,10 @@ body {
     h1 {
         font-size: 4em;
         text-align: center;
-        color: #ddd;
     }
     p {
         font-size: 1.5em;
         text-align: center;
-        color: #ddd;
-    }
-    h2{
-        color: #ddd;
     }
 }
 
@@ -201,19 +191,10 @@ body {
         margin-top: 20px;
         margin-bottom: 10px;
         padding-bottom: 10px;
-        color: #ddd;
     }
     p {
         line-height: 1.25;
-        color: #ddd;
     }
-    h4{
-        color: #ddd;
-    }
-}
-
-span{
-    color: #ddd;
 }
 
 .form-container {
@@ -237,9 +218,9 @@ span{
 
 .card {
     margin: 0px;
-    background-color: #1e1e1e;
-    border: 1px solid #888;
-    border-radius: 0px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     overflow: hidden; /* Ensures the image does not overflow the card */
     text-align: center; /* Center the text */
     height: 100%;
@@ -247,15 +228,8 @@ span{
     h4 {
         font-size: 1.25em;
         margin-top: 0;
-        color: #ddd;
-    }
-    h5{
-        color: #ddd;
     }
 }
-
-p{
-    color: #ddd;}
   
 .card-img-container {
     height: auto;
@@ -264,7 +238,7 @@ p{
     padding-left: 0%;
     display: block;
     padding-bottom: 0;
-    background-color: #282828;
+    background-color: #e7e7e7;
 }
 
 .card-img-container2 {
@@ -274,7 +248,7 @@ p{
     padding-left: 20%;
     padding-bottom: 10%;
     display: block;
-    background-color: #282828;
+    background-color: #e7e7e7;
     box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
 }
 
@@ -310,7 +284,7 @@ p{
 
 .card-text {
     font-size: 1em;
-    color: #ddd;
+    color: #555;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -460,9 +434,9 @@ header {
 }
 
 .footer {
-    background-color: #282828;
+    background-color: #eee;
     padding: 20px 0;
-    border-top: 1px solid #888;
+    border-top: 1px solid #e0e0e0;
     text-align: center;
 }
 
@@ -522,7 +496,7 @@ header {
 }
 
 .footer-link {
-    color: #ddd;
+    color: #212121;
     text-decoration: none;
     font-size: 0.75em; /* Smaller font size */
     font-weight: 500;
@@ -531,7 +505,7 @@ header {
 }
 
 .footer-link:hover {
-    color: #5886c6;
+    color: #8167a9;
 }
 
 .social-links {
@@ -542,7 +516,7 @@ header {
 }
 
 .social-links a {
-    color: #ddd; /* Set the text color to black */
+    color: #000; /* Set the text color to black */
     text-decoration: none;
     font-size: 1em;
     font-weight: 500;
@@ -583,11 +557,3 @@ header {
         align-items: center;
     }
 }
-
-div{
-    color: #ddd;
-}
-
-.navigation-wrap {
-    border-bottom: 1px solid #888; /* Adds a line at the bottom of the navbar */
-  }  
